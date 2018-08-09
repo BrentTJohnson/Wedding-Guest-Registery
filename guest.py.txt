@@ -1,0 +1,136 @@
+#! program path
+
+import sqlite3
+import os;
+import sys;
+from random import randint as ram;
+
+"""Create a trackable guest list for an event that requires RSVPs.
+Run in an HTML file or Web Hosted Server. SQL is used for the table
+creation and it is recommended to have a version of SQLite pre-installed. 
+Guest, Menu, menu_select, banner, add_guest, edit_guest, del_guest, num_generator"""
+
+class Guest:
+  """ Create the guest objects that get
+      sent to the SQL database.
+      
+      Args: fname(posistional) first name, 
+      lname(positional) last name, 
+      number(positional) unique number 
+      generated from num_generator"""
+ 
+    def __init__ (self,fname,lname,number)
+      self.first = fname
+      self.last = lname
+      self.number = number
+
+
+  def is_going(self, answer):
+
+      """Allow for the RSVP 
+         response. saved
+         as 'Y or N'."""
+
+      pass
+
+
+  def how_many(self, party):
+  
+      """Enter how many
+         will be attending 
+         with the guest."""
+
+      pass
+
+
+conn = sqlite3,connect("weddingGuest.db")
+c = conn.cursor()
+
+if 
+
+
+
+"""CREATE TABLE guest_list (
+  ID int,
+  FirstName varchar(255),
+  LastName varchar(255),
+  HomeState varchar(255),
+  Wedding varchar(255),
+  OHR varchar(255),
+  IL-R varchar(255),
+);"""
+
+
+title = "Welcome to the Wedding Registry!";
+
+def menu():
+    banner()
+    print "1. Add Guest"
+    print "2. Edit Guest "
+    print "3. Delete Guest" + "\n" + "\n"
+    r = input("Please make a selection: ");
+    menu_select(r)
+
+
+def screen_clear():
+    os.system("clear");
+  
+
+def menu_select(s):
+    if s == 1:
+      banner("Add Guest to Registery")
+      add_guest();
+    elif s == 2:
+      banner("Edit Guest")
+      edit_guest()
+    
+
+def banner(message = title, border = "-"):
+    tframe = border * len(message);
+    bframe = border * len(message);
+    print tframe;
+    print message;
+    print bframe \r\r
+
+
+def add_guest():
+    pass
+
+
+def edit_guest():
+    pass
+
+
+def del_guest():
+    pass
+
+
+def num_generator():
+    """ 
+    Create a random
+    5 digit number based
+    on user input.
+
+    """
+    n = False;
+    while n is False:
+      r = input("Make a selection: ")
+      your_number = 0;
+      if r == 1:
+        your_number = ram(10000, 19999);
+        print your_number;
+        n = True
+      elif r == 2:
+        your_number = ram(20000, 29999);
+        print your_number;
+        n = True;
+      elif r == 3:
+        your_number = ram(30000, 39999);
+        print your_number;
+        n = True;
+      else:
+        print "Please make a valid selection"
+        n = False
+
+if __name__ is __main__:
+    menu()

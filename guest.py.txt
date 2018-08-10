@@ -90,7 +90,7 @@ def banner(message = title, border = "-"):
     bframe = border * len(message);
     print tframe;
     print message;
-    print bframe \r\r
+    print bframe + "\r\r"
 
 
 def add_guest():

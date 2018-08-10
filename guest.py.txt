@@ -20,9 +20,9 @@ class Guest:
       generated from num_generator"""
  
     def __init__ (self,fname,lname,number)
-      self.first = fname
-      self.last = lname
-      self.number = number
+      self._first = fname
+      self._last = lname
+      self._number = number
 
 
   def is_going(self, answer):
